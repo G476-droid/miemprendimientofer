@@ -1,0 +1,132 @@
+:root {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: #1f2937;
+  background-color: #f8fafc;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(120deg, #f8fafc 0%, #eef2ff 100%);
+}
+
+.login {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.login__panel {
+  padding: 64px 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+}
+
+.login__brand h1 {
+  font-size: 2.4rem;
+  margin: 8px 0 12px;
+}
+
+.login__tag {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  color: #475569;
+}
+
+.login__subtitle {
+  color: #475569;
+  max-width: 420px;
+}
+
+.login__form {
+  display: grid;
+  gap: 16px;
+  max-width: 360px;
+}
+
+.login__form label {
+  display: grid;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.login__form input {
+  border-radius: 12px;
+  border: 1px solid #cbd5f5;
+  padding: 12px 16px;
+  font-size: 1rem;
+}
+
+.login__form button {
+  background: #1d4ed8;
+  color: #fff;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 12px 25px rgba(29, 78, 216, 0.2);
+}
+
+.login__form button:hover {
+  background: #1e40af;
+}
+
+.login__help {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.login__status {
+  background: #ecfeff;
+  border: 1px solid #a5f3fc;
+  padding: 12px 16px;
+  border-radius: 12px;
+  max-width: 360px;
+  color: #0e7490;
+  font-weight: 600;
+}
+
+.login__aside {
+  background: url("https://images.unsplash.com/photo-1501706362039-c6e52f68d1ad?auto=format&fit=crop&w=1200&q=80") center/cover;
+  position: relative;
+  color: #fff;
+}
+
+.login__aside::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(150deg, rgba(30, 41, 59, 0.85), rgba(29, 78, 216, 0.55));
+}
+
+.login__aside > div {
+  position: relative;
+  z-index: 1;
+  padding: 72px 56px;
+  display: grid;
+  gap: 16px;
+}
+
+.login__aside h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.login__aside ul {
+  padding-left: 20px;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+
+@media (max-width: 720px) {
+  .login__panel,
+  .login__aside > div {
+    padding: 48px 32px;
+  }
+}
