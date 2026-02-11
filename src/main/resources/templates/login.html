@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ingreso | Granja Avícola El Ponal</title>
+  <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+  <main class="login">
+    <section class="login__panel">
+      <div class="login__brand">
+        <p class="login__tag">Crianza de gallinas de engorde y ponedoras</p>
+        <h1>Granja Avícola El Ponal</h1>
+        <p class="login__subtitle">Control integral de lotes, producción y calidad de huevo.</p>
+      </div>
+      <form class="login__form" method="post" action="/login">
+        <label>
+          Usuario
+          <input type="text" name="usuario" placeholder="Ej. ana.mora" required>
+        </label>
+        <label>
+          Clave
+          <input type="password" name="clave" placeholder="••••••••" required>
+        </label>
+        <button type="submit">Ingresar</button>
+        <p class="login__help">¿Olvidaste tu clave? Contacta al administrador de granja.</p>
+      </form>
+      <div class="login__status" th:if="${mensaje}">
+        <strong th:text="${mensaje}"></strong>
+      </div>
+    </section>
+    <aside class="login__aside">
+      <div>
+        <h2>Bienvenida segura</h2>
+        <p>Accede al panel de monitoreo diario de pollos de engorde y ponedoras.</p>
+        <ul>
+          <li>Registro sanitario y vacunación.</li>
+          <li>Consumo de alimento y agua.</li>
+          <li>Producción diaria de huevo.</li>
+        </ul>
+      </div>
+    </aside>
+  </main>
+</body>
+</html>
